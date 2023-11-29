@@ -25,7 +25,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="flex flex-col f-full">
+            <div className="flex flex-col f-full min-h-screen">
               <div className="flex-1 m-auto w-full">
                 {children}
               </div>
