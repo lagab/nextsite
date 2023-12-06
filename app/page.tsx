@@ -1,9 +1,10 @@
-import { Cta } from '@/components/Cta'
+import { Cta, CtaImagePosition } from '@/components/Cta'
 import { Section } from '@/components/Section'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/src/features/layout/Footer'
 import { Header } from '@/src/features/layout/Header'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -17,14 +18,26 @@ export default function Home() {
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
               I'm building a web app with Next.js 13 and open sourcing everything. Follow along as we figure this out together.
             </p>
-            <div className="space-x-4">
-              <a className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 rounded-md" href="/login">Get Started</a>
-              <a target="_blank" rel="noreferrer" className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:bg-accent hover:text-accent-foreground h-11 px-8 rounded-md" href="https://github.com/shadcn/taxonomy">GitHub</a>
+            <div className='space-x-4'>
+              <Button asChild variant={'default'} size={'lg'}><Link href="/login">Get Started</Link></Button>
+              <Button asChild variant={'outline'} size={'lg'}><Link href="https://github.com/shadcn/taxonomy" target="_blank">GitHub</Link></Button>
             </div>
-            </div>
+          </div>
         </Section>
         <Section>
-          <Cta />
+          <Cta 
+          title="Let's create more tools and ideas that brings us together22." 
+          body="Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discoering new ones is easy with features like Groups."
+          image={{url:"https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",title: "tiite", position: CtaImagePosition.BEFORE}}
+          />
+          <Cta 
+          title="Let's create more tools and ideas that brings us together22." 
+          body="Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discoering new ones is easy with features like Groups."
+          action={<div className='space-x-4'>
+            <Button asChild variant={'default'}><Link href="/login">Login</Link></Button>
+            <Button asChild variant={'outline'}><Link href="/login">Login</Link></Button>
+          </div>}
+          />
         </Section>
         
         <Section id="open-source" size={'lg'} className="bg-slate-50 dark:bg-gray-900">
