@@ -1,4 +1,5 @@
 import { Cta, CtaImagePosition } from '@/components/Cta'
+import { PricingCard } from '@/components/PricingCard'
 import { Section } from '@/components/Section'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/src/features/layout/Footer'
@@ -30,14 +31,21 @@ export default function Home() {
           body="Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discoering new ones is easy with features like Groups."
           image={{url:"https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg",title: "tiite", position: CtaImagePosition.BEFORE}}
           />
+          <div className="text-center">
           <Cta 
           title="Let's create more tools and ideas that brings us together22." 
           body="Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discoering new ones is easy with features like Groups."
-          action={<div className='space-x-4'>
+          action={<div className='space-x-4 text-center'>
             <Button asChild variant={'default'}><Link href="/login">Login</Link></Button>
             <Button asChild variant={'outline'}><Link href="/login">Login</Link></Button>
           </div>}
           />
+          </div>
+          <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+              <PricingCard />
+              <PricingCard />
+              <PricingCard />
+          </div>
         </Section>
         
         <Section id="open-source" size={'lg'} className="bg-slate-50 dark:bg-gray-900">
