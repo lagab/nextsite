@@ -1,3 +1,4 @@
+import { LinkList, link } from '@/components/LinkList'
 import { Facebook, Github, Instagram, Twitter } from 'lucide-react'
 import React from 'react'
 
@@ -10,69 +11,41 @@ export const Footer = () => {
       <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                    <a href="#" className=" hover:underline">About</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Careers</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Brand Center</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Blog</a>
-                </li>
-            </ul>
+            <LinkList className="text-gray-500 dark:text-gray-400 font-medium" 
+            links={[
+            {title: 'About',href: '#', name:'About'},
+            {title: 'Careers',href: '#', name:'Careers'},
+            {title: 'Brand Center',href: '#', name:'Brand Center'},
+            {title: 'Blog',href: '#', name:'Blog'},
+            ]} />
         </div>
         <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Discord Server</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Twitter</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Facebook</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Contact Us</a>
-                </li>
-            </ul>
+            <LinkList className="text-gray-500 dark:text-gray-400 font-medium" 
+            links={[
+            {title: 'iOS',href: '#', name:'Discord Server'},
+            {title: 'Android',href: '#', name:'Twitter'},
+            {title: 'Windows',href: '#', name:'Facebook'},
+            ]} />
         </div>
         <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Privacy Policy</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Licensing</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Terms &amp; Conditions</a>
-                </li>
-            </ul>
-
+            <LinkList className="text-gray-500 dark:text-gray-400 font-medium" 
+            links={[
+            {title: 'Privacy Policy',href: '#', name:'Privacy Policy'},
+            {title: 'Licensing',href: '#', name:'Licensing'},
+            {title: 'Terms & Conditions',href: '#', name:'Terms &amp; Conditions'},
+            ]} />
         </div>
         <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">iOS</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Android</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">Windows</a>
-                </li>
-                <li className="mb-4">
-                    <a href="#" className="hover:underline">MacOS</a>
-                </li>
-            </ul>
+            <LinkList className="text-gray-500 dark:text-gray-400 font-medium" 
+            links={[
+            {title: 'iOS',href: '#', name:'iOS'},
+            {title: 'Android',href: '#', name:'Android'},
+            {title: 'Windows',href: '#', name:'Windows'},
+            {title: 'MacOS',href: '#', name:'MacOS'},
+            ]} />
         </div>
     </div>
     
